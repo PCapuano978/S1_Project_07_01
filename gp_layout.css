@@ -26,7 +26,7 @@
 body {
     display: -webkit-flex;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 section#sheet {
@@ -47,7 +47,7 @@ article {
 
 @media only screen and (max-width: 480px) {
 
-    img {
+    img.panel {
         width: 100%;
     }
 
@@ -61,6 +61,22 @@ article {
         order: 100;
     }
 
+    img.size1 {
+        width: 100%;
+    }
+
+    img.size2 {
+        width: 60%;
+    }
+
+    img.size3 {
+        width: 40%;
+    }
+
+    img.size4 {
+        width: 30%;
+    }
+
 }
 
 
@@ -69,3 +85,35 @@ article {
 	Tablet and Desktop Devices: Greater than 480 pixels
    ===================================================
 */
+
+@media only screen and (min-width: 480px) {
+
+    nav.horizontal ul {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: nowrap;
+        height: 40px;
+    }
+
+    nav.horizontal ul li {
+        -webkit-box-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+    img.size1 {
+        width: 100%;
+    }
+
+    img.size2 {
+        width: 60%;
+    }
+
+    img.size3 {
+        width: 40%;
+    }
+
+    img.size4 {
+        width: 30%;
+    }
+
+}
