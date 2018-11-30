@@ -29,16 +29,21 @@ body {
     flex-wrap: wrap;
 }
 
+/* Applying to the whole body in the HTML document is a flexbox that first is defined as its web extention, then done as its declaration of the display style element. Additional, this flexbox assigned is also given the abillity to wrap its content. */
+
 section#sheet {
     -webkit-box-flex: 3 1 301px;
     flex: 3 1 301px;
 }
+
+/* In a section that is given the ID of sheet (reminder that ID selectors target only one of its type), the flexbox is altered to have its growth and shrink values into three and one respectively, and with a base size of three hundred and one pixels. It's also worth mentioning that this must be set in a similar vein to normal flexboxes including both the browser extention and the normal declaration.  */
 
 article {
     -webkit-box-flex: 1 3 180px;
     flex: 1 3 180px;
 }
 
+/* All articles are stated here to have their flexbox be given a growth value of one and a shrink value of three. Aditonally, the basis size is set to one hundred and eighty pixels. */
 
 /* ============================================
 	Mobile Devices: 0 - 480 pixels
@@ -47,19 +52,27 @@ article {
 
 @media only screen and (max-width: 480px) {
 
+    /* This media query here is used to set certain style rules specific to the users device they are viewing the pages on. This is accomplished by detecting the width of the platform's screen, in this case, for mobile users who have their phone's screen that have less than four hundred and eighty pixels. As such,the style rules below are to ensure that mobile users have a better experince when viewing by having the layout manuelly suited for better navigation practices. */
+
     img.panel {
         width: 100%;
     }
+
+    /* Starting out with the mobile device media query, images with the "panel" class (reminder that classes are selectors that may work on a group of elements) are made sure to have their widths set to take up all the space provided by having it set to one hundred percent. */
 
     nav.horizontal {
         -webkit-order: 99;
         order: 99;
     }
 
+    /* Horizontal navigation tabs indicated by the "horizontal" class are given a flex order of "99", making it so that they will appear sooner on the document than any number set to an element that is bigger than that one, and inversly appearing later than any number smaller than that. Like any other flex element, they still must be signed the web extension in addition to the original order element.  */
+
     body>footer {
         -webkit-order: 100;
         order: 100;
     }
+
+    /* Footers that only are a direct child element to the "body" tags are given a flex order of "100", giving it the respective appearence, similarly appearing later than the horizontal navigation tabs because of their higher value than their "99". It's also worht mentioning that it is a good practice to have the intended last values of the page be set to "100" so the designer has the abillity to work their way down to include smaller numbers as more are added before that first one. */
 
     img.size1 {
         width: 100%;
@@ -76,6 +89,8 @@ article {
     img.size4 {
         width: 30%;
     }
+
+    /* All of these image style rules share the same theme of setting a width size to the images with the varing classes of "size1-4", with "1", "2", "3", and "4" being one hundred, sixty, fourty, and thirty respectivly with all of them. */
 
 }
 
@@ -86,7 +101,9 @@ article {
    ===================================================
 */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 481px) {
+
+    /* This media query serves a similar purpose to the last one, but this time aims towards tablet and desktop users by targetting devices detected with a screen size now greater than four hundred and eighty pixels, and as such alters some of the elements to fit in more accordinly to the much larger screen space there is in either of these platforms.  */
 
     nav.horizontal ul {
         display: -webkit-flex;
@@ -95,10 +112,14 @@ article {
         height: 40px;
     }
 
+    /* Starting of with tablet and desktop specific styles, horizontal nagivation tab's unordered list (try saying that five times fast...) are given instead a flex direction that no longer wraps the links and keeps them on line, in addition to also making the height fourty pixels. */
+
     nav.horizontal ul li {
         -webkit-box-flex: 1 1 auto;
         flex: 1 1 auto;
     }
+
+    /* The unordered list items in the horizontal navigation tab are given linear growth and shrink values of "1" while their basis size is automatic depending on surrounding elements. */
 
     img.size1 {
         width: 100%;
@@ -115,5 +136,7 @@ article {
     img.size4 {
         width: 30%;
     }
+
+    /* The specified image sizes are also altered here just like in the mobile styles, except this time... they're the exact same! If I wasn't trying put personallity into my comments, (in which case,thanks so much for reading until the end) I would just put all these styles above both media queries so there is less code for the page to load, while still having the same effect for both, but I want to point this out as a learning process to keep in mind with my future work. */
 
 }

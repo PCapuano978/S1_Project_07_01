@@ -14,7 +14,7 @@
 
 */
 
-
+/* It is worth noting this document (as if it wasn't already stated) is directly aimed at how these webpages are to be printed, and don't affect the other CSS throughout the website. This is done to make sure the users can print out the webpages properly without unautral sizes, content cutting, and any other problems that would arise if these were not to be addressed.  */
 
 /* Hidden Objects */
 
@@ -24,10 +24,17 @@ article {
     display: none;
 }
 
+/* Starting off the printer styles, the nav, footer, and article independently are set to not appear at all for the convience that would likely be lacking if they were to be present in the printing process. */
+
+
+/* Comic Book Sheet Styles */
+
 section#sheet {
     width: 6in;
     margin: 0in auto;
 }
+
+/* The sections with the ID of "sheet" are given a width of six inches (a more appropraite measure for the real world) and a margin that has the top and bottom absent with the sides being automatic, centering this content on the printing pages. */
 
 img.size1 {
     width: 5in;
@@ -45,4 +52,4 @@ img.size4 {
     width: 1.5in;
 }
 
-/* Comic Book Sheet Styles */
+/* Like the standard CSS stylesheet, the different image size classes are address, but here are given more fitting lengths suited for being on printed material. These consist of "1" through "4" being, five, three, two, and one and a half inches respectivly. */
